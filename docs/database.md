@@ -1,0 +1,1 @@
+![database erd](/gfx/erd-conceptual.drawio.png)
