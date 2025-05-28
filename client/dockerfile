@@ -1,10 +1,15 @@
 FROM ubuntu:22.04
 
 RUN mkdir "/home/workspace"
+WORKDIR /home/workspace
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install git -y
+RUN apt-get install -y curl
 
-WORKDIR /home/workspace
+RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt-get install -y nodejs
+
 CMD ["/bin/bash"]
