@@ -1,0 +1,2 @@
+cd /home/workspace/src/cash_tracker_server
+uvicorn main:cash_tracker_server --host=0.0.0.0 --port=8000 --reload --ssl-keyfile /home/workspace/certs/server.key --ssl-certfile /home/workspace/certs/server.crt

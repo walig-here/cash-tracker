@@ -6,5 +6,10 @@ RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install git -y
 
+RUN apt-get update -y
+RUN apt-get install python3 -y
+RUN apt-get install python3-pip -y
+RUN pip install fastapi[standard] uvicorn[standard]
+
 WORKDIR /home/workspace
 CMD ["/bin/bash"]
