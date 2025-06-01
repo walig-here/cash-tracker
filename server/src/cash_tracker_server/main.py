@@ -11,9 +11,9 @@ from fastapi.middleware.cors import CORSMiddleware
 TestResponse = dict[Literal["echo", "timestamp"], str]
 
 
-CLIENT_SERVER_ADDRESS: str | None = os.getenv("CLIENT_SERVER_IP")
+CLIENT_SERVER_ADDRESS: str | None = os.getenv("CLIENT_SERVER_URL")
 if CLIENT_SERVER_ADDRESS is None:
-    print("The `CLIENT_SERVER_IP` env variable is not set. Exiting...")
+    print("The `CLIENT_SERVER_URL` env variable is not set. Exiting...")
     sys.exit(1)
 CORS_ALLOWED_ORIGINS = [CLIENT_SERVER_ADDRESS]
 cash_tracker_server: FastAPI = FastAPI()

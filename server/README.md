@@ -21,11 +21,11 @@ You need to have *Docker* installed.
     ./run-container.sh
     ```
 
-2. In container's `/home/workspace` dir create a `.env` file where you define server's IP address stored in `SERVER_IP` env variable. You must also define there the `CLIENT_SERVER_ADDRESS` env variable that contains an address (IP:PORT) of the client's dev server. Example:
+2. In container's `/home/workspace` dir create a `setenv.sh` file where you define server's IP address stored in `SERVER_IP` env variable. You must also define there the `CLIENT_SERVER_URL` env variable that contains an URL of the client's dev server. Example:
 
     ```bash
-    SERVER_IP=192.168.34.1
-    CLIENT_SERVER_IP=192.168.34.5
+    export SERVER_IP="192.168.34.1"
+    export CLIENT_SERVER_URL="https://192.168.34.5:5173"
     ```
 
 3. Source the created `.env` file to export you defined `SERVER_IP`.

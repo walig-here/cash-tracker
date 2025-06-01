@@ -4,3 +4,4 @@
 *.csr
 __pycache__
 .env
+setenv.sh
